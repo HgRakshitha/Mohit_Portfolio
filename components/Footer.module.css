@@ -1,0 +1,26 @@
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  text-align: center;
+  color: var(--gray-400);
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.heart {
+  margin: 0 0.5rem;
+  color: #ef4444;
+}
+
+.copyright {
+  font-size: 0.875rem;
+}
+

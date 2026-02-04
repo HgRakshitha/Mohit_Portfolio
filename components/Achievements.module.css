@@ -1,0 +1,103 @@
+.section {
+  padding: 2rem 0;
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 2.25rem;
+  }
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+.achievementsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.achievementCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.achievementCard::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary), var(--accent));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s ease;
+}
+
+.achievementCard:hover::before {
+  transform: scaleY(1);
+}
+
+.achievementCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(236, 72, 153, 0.3);
+  box-shadow: 0 8px 32px rgba(236, 72, 153, 0.15);
+  padding-left: 1.75rem;
+}
+
+.trophyIcon {
+  color: var(--accent);
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  filter: drop-shadow(0 0 8px rgba(236, 72, 153, 0.4));
+  transition: all 0.3s ease;
+}
+
+.achievementCard:hover .trophyIcon {
+  filter: drop-shadow(0 0 12px rgba(236, 72, 153, 0.6));
+}
+
+.achievementText {
+  color: var(--gray-300);
+  line-height: 1.8;
+  flex: 1;
+  font-size: 0.95rem;
+  text-align: justify;
+  text-justify: inter-word;
+  transition: color 0.3s ease;
+}
+
+.achievementCard:hover .achievementText {
+  color: var(--white);
+}
