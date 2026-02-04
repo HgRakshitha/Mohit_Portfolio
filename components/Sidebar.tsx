@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 import { useState } from 'react'
+import Image from 'next/image'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
 import { FaLinkedin, FaGithub, FaGoogle, FaTwitter } from 'react-icons/fa'
 import styles from './Sidebar.module.css'
@@ -107,10 +108,14 @@ export default function Sidebar() {
                   transition: { duration: 0.3 }
                 }}
               >
-                <img
-                  src="/mohit.jpeg"
+                <Image
+                  src="/mohit.JPEG"
                   alt="Mohit Kumar Pal"
+                  width={120}
+                  height={120}
                   className={styles.avatarImage}
+                  priority
+                  unoptimized
                 />
               </motion.div>
               <motion.div 
