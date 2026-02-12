@@ -20,6 +20,13 @@ const education = [
     location: 'Bhubaneshwar, Odisha',
     cgpa: 'Percentage: 91.60%',
   },
+  {
+    degree: 'Secondary School Certificate (CBSE)',
+    institution: 'TPS DAV Public School, Baharagora',
+    period: '2018',
+    location: 'Baharagora, Jharkhand',
+    cgpa: 'Percentage: 90.00%',
+  },
 ]
 
 const containerVariants = {

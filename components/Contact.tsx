@@ -10,7 +10,7 @@ const contactInfo = [
   { icon: FaEnvelope, text: 'mohit.official.one@gmail.com', href: 'mailto:mohit.official.one@gmail.com' },
   { icon: FaPhone, text: '+91-8581017107', href: 'tel:+918581017107' },
   { icon: FaMapMarkerAlt, text: 'Bengaluru, Karnataka - 560068', href: null },
-  { icon: FaLinkedin, text: 'linkedin.com/mohitkumarpal', href: 'https://linkedin.com/mohitkumarpal' },
+  { icon: FaLinkedin, text: 'linkedin.com/in/mohit-kumar-pal', href: 'https://www.linkedin.com/in/mohit-kumar-pal-220ba7227/' },
   { icon: FaGithub, text: 'github.com/KumarMohit85', href: 'https://github.com/KumarMohit85' },
 ]
 

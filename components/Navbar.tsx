@@ -11,7 +11,7 @@ const navItems = [
   { name: 'Projects', href: '#portfolio' },
   { name: 'Skills', href: '#skills' },
   { name: 'Achievements', href: '#achievements' },
-  { name: 'Resume', href: '/Mohit_Kumar_Pal_Resume.pdf', download: true },
+  { name: 'Resume', href: 'https://drive.google.com/file/d/1qCtxEwzm4Iq_u9nSAFM7T0Ao4qoe2p0B/view?usp=sharing', external: true },
 ]
 
 const itemVariants = {
@@ -43,7 +43,7 @@ export default function Navbar() {
       const scrollTop = isMobile ? window.scrollY : (contentWrapper?.scrollTop || 0)
       
       const sections = navItems
-        .filter(item => !item.download)
+        .filter(item => !item.external)
         .map(item => {
           const id = item.href.replace('#', '')
           const element = document.querySelector(item.href)
@@ -120,14 +120,13 @@ export default function Navbar() {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         {navItems.map((item, index) => {
-          const isActive = !item.download && activeSection === item.href.replace('#', '')
+          const isActive = !item.external && activeSection === item.href.replace('#', '')
           return (
             <motion.a
               key={item.name}
               href={item.href}
-              download={item.download ? 'Mohit_Kumar_Pal_Resume.pdf' : undefined}
-              target={item.download ? '_blank' : undefined}
-              rel={item.download ? 'noopener noreferrer' : undefined}
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noopener noreferrer' : undefined}
               className={`${styles.navLink} ${isActive ? styles.active : ''}`}
               custom={index}
               variants={itemVariants}
@@ -140,7 +139,7 @@ export default function Navbar() {
               }}
               whileTap={{ scale: 0.95 }}
               onClick={(e) => {
-                if (!item.download) {
+                if (!item.external) {
                   e.preventDefault()
                   const contentWrapper = document.getElementById('content-wrapper') as HTMLElement
                   const element = document.querySelector(item.href)

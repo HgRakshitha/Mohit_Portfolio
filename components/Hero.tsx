@@ -1,14 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaExternalLinkAlt } from 'react-icons/fa'
 import { HiArrowDown } from 'react-icons/hi'
 import styles from './Hero.module.css'
 
 export default function Hero() {
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com/KumarMohit85', label: 'GitHub' },
-    { icon: FaLinkedin, href: 'https://linkedin.com/mohitkumarpal', label: 'LinkedIn' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/mohit-kumar-pal-220ba7227/', label: 'LinkedIn' },
     { icon: FaEnvelope, href: 'mailto:mohit.official.one@gmail.com', label: 'Email' },
   ]
 
@@ -61,14 +61,15 @@ export default function Hero() {
               transition={{ delay: 0.8 }}
             >
               <motion.a
-                href="/Mohit_Kumar_Pal_Resume.pdf"
-                download="Mohit_Kumar_Pal_Resume.pdf"
+                href="https://drive.google.com/file/d/1qCtxEwzm4Iq_u9nSAFM7T0Ao4qoe2p0B/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`glass-effect ${styles.downloadBtn}`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaDownload size={18} />
-                <span>Download Resume</span>
+                <FaExternalLinkAlt size={18} />
+                <span>View Resume</span>
               </motion.a>
               
               <div className={styles.socialLinks}>

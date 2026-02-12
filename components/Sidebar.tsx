@@ -4,7 +4,7 @@ import { motion, useMotionValue, useSpring } from 'framer-motion'
 import { useState } from 'react'
 import Image from 'next/image'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
-import { FaLinkedin, FaGithub, FaGoogle, FaTwitter } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa'
 import styles from './Sidebar.module.css'
 
 const contactInfo = [
@@ -29,9 +29,9 @@ const contactInfo = [
 ]
 
 const socialLinks = [
-  { icon: FaLinkedin, href: 'https://linkedin.com/mohitkumarpal', label: 'LinkedIn' },
+  { icon: FaLinkedin, href: 'https://www.linkedin.com/in/mohit-kumar-pal-220ba7227/', label: 'LinkedIn' },
   { icon: FaGithub, href: 'https://github.com/KumarMohit85', label: 'GitHub' },
-  { icon: FaGoogle, href: 'mailto:mohit.official.one@gmail.com', label: 'Google' },
+  { icon: FaInstagram, href: 'https://www.instagram.com/mohit_my_dear/', label: 'Instagram' },
   { icon: FaTwitter, href: 'https://x.com/MohitKumar861', label: 'Twitter' },
 ]
 

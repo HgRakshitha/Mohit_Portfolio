@@ -60,7 +60,7 @@ export default function About() {
             transition: { duration: 0.2 }
           }}
         >
-          A passionate Software Developer with strong expertise in full-stack development, Node.js, Flutter, AWS, REST APIs, UI/UX, and state management solutions. Proven track record in delivering cutting-edge solutions, including API integration, third-party libraries, and performance optimization. Adept at debugging to ensure high-quality, responsive applications and an agile collaborator committed to staying current with industry trends.
+          Backend-focused Software Engineer with hands-on experience building real-time, production-grade systems. I specialize in designing scalable backend architectures using Node.js and Spring Boot, implementing event-driven workflows, Redis caching, background job scheduling, and cloud-native deployments on AWS.
         </motion.p>
         
         <motion.p 
@@ -71,7 +71,7 @@ export default function About() {
             transition: { duration: 0.2 }
           }}
         >
-          If you're seeking a skilled Software Developer to breathe life into your project and exceed your expectations, I am here to collaborate and create magic together. Reach out, and let's transform your vision into a reality!
+          Alongside backend systems, I build clean-architecture Flutter applications integrated with secure, role-based APIs. I enjoy solving complex system problems, optimizing performance, and designing reliable multi-actor platforms that operate in real-world production environments.
         </motion.p>
       </motion.div>
     </section>

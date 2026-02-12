@@ -2,29 +2,29 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { FaMobileAlt, FaCode, FaPencilRuler, FaServer } from 'react-icons/fa'
+import { FaMobileAlt, FaBolt, FaServer, FaCloud } from 'react-icons/fa'
 import styles from './Services.module.css'
 
 const services = [
   {
     icon: FaMobileAlt,
-    title: 'Mobile Apps',
-    description: 'Professional development of applications for Android and iOS.',
+    title: 'Mobile Engineering (Flutter)',
+    description: 'Building production-ready cross-platform applications using Flutter, implementing clean architecture, Riverpod, and scalable backend integrations.',
   },
   {
-    icon: FaCode,
-    title: 'Web Development',
-    description: 'High-quality development of sites at the professional level.',
-  },
-  {
-    icon: FaPencilRuler,
-    title: 'UI/UX Design',
-    description: 'The most modern and high-quality design.',
+    icon: FaBolt,
+    title: 'Real-Time & Event-Driven Systems',
+    description: 'Designing low-latency systems using WebSockets, SSE, and FCM, powering trading streams, delivery tracking, and assignment pipelines.',
   },
   {
     icon: FaServer,
-    title: 'Backend Development',
-    description: 'High-performance backend services.',
+    title: 'Backend Architecture & Performance',
+    description: 'Architecting multi-actor systems with Node.js and Spring Boot, implementing RBAC, complex workflows, Redis caching, and background job scheduling.',
+  },
+  {
+    icon: FaCloud,
+    title: 'Cloud & Production Infrastructure',
+    description: 'Deploying and scaling systems on AWS (EC2, Lambda, API Gateway) with containerization, reliability-focused design, and automated workflows.',
   },
 ]
 
