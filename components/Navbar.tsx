@@ -10,6 +10,7 @@ const navItems = [
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#portfolio' },
   { name: 'Skills', href: '#skills' },
+  { name: 'Coding Profile', href: '#milestones' },
   { name: 'Achievements', href: '#achievements' },
   { name: 'Resume', href: 'https://drive.google.com/file/d/1qCtxEwzm4Iq_u9nSAFM7T0Ao4qoe2p0B/view?usp=sharing', external: true },
 ]

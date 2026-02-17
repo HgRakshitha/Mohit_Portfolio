@@ -9,6 +9,7 @@ import Education from '@/components/Education'
 import Experience from '@/components/Experience'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
+import CodingProfile from '@/components/CodingProfile'
 import Achievements from '@/components/Achievements'
 import CustomCursor from '@/components/CustomCursor'
 import styles from './page.module.css'
@@ -39,6 +40,7 @@ export default function Home() {
               <Experience />
               <Projects />
               <Skills />
+              <CodingProfile />
               <Achievements />
             </div>
           </main>
