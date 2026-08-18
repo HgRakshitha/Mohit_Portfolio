@@ -31,7 +31,6 @@ const projects = [
     name: 'WashBee',
     tech: 'Flutter, Dart, Provider, Google Maps, Dio, Firebase FCM',
     period: '2024',
-    githubUrl: 'https://github.com/KumarMohit85/WashBee',
     detailUrl: '/projects/washbee',
     description: 'On-demand mobile laundry ecosystem for Customers, Delivery Drivers & Warehouse Staff with pin-drop GPS & live order tracking.',
     color: 'rgba(59, 130, 246, 0.25)',
@@ -206,29 +205,31 @@ export default function Projects() {
               >
                 {project.name}
               </motion.h3>
-              <motion.a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.githubLink}
-                initial={{ opacity: 0, scale: 0, rotate: -180 }}
-                animate={inView ? { 
-                  opacity: 1, 
-                  scale: 1, 
-                  rotate: 0,
-                } : {}}
-                transition={{ delay: 0.3 + (index * 0.15), type: 'spring', stiffness: 200 }}
-                whileHover={{ 
-                  scale: 1.2,
-                  rotate: [0, -10, 10, -10, 0],
-                  transition: { duration: 0.3 }
-                }}
-                whileTap={{ scale: 0.9 }}
-                aria-label={`View ${project.name} on GitHub`}
-              >
-                <FaGithub size={20} />
-                <FaExternalLinkAlt size={12} className={styles.externalIcon} />
-              </motion.a>
+              {project.githubUrl && (
+                <motion.a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.githubLink}
+                  initial={{ opacity: 0, scale: 0, rotate: -180 }}
+                  animate={inView ? { 
+                    opacity: 1, 
+                    scale: 1, 
+                    rotate: 0,
+                  } : {}}
+                  transition={{ delay: 0.3 + (index * 0.15), type: 'spring', stiffness: 200 }}
+                  whileHover={{ 
+                    scale: 1.2,
+                    rotate: [0, -10, 10, -10, 0],
+                    transition: { duration: 0.3 }
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  aria-label={`View ${project.name} on GitHub`}
+                >
+                  <FaGithub size={20} />
+                  <FaExternalLinkAlt size={12} className={styles.externalIcon} />
+                </motion.a>
+              )}
             </div>
             
             <motion.p 
