@@ -19,11 +19,13 @@ const projects = [
   },
   {
     name: 'PaperSafe',
-    tech: 'Flutter, Node.js, Express.js, MongoDB, Cloudinary',
+    tech: 'Flutter, Node.js, Express.js, MongoDB, Gemini AI, AES-256-CBC',
     period: 'Oct 2024 – Nov 2024',
     githubUrl: 'https://github.com/KumarMohit85/PaperSafe',
-    description: 'Digital document wallet with secure storage and AES-256-CBC encryption',
-    color: 'rgba(6, 182, 212, 0.15)',
+    detailUrl: '/projects/papersafe',
+    description: 'AI-Powered & Hardware-Secured Digital Vault built with Flutter, Riverpod, Node.js, Gemini AI, ML Kit OCR, and offline BLE & Wi-Fi Direct P2P transfer.',
+    color: 'rgba(6, 182, 212, 0.25)',
+    badge: 'Featured Project',
   },
   {
     name: 'MusicPlayer',
