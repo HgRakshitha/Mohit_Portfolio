@@ -28,6 +28,16 @@ const projects = [
     badge: 'Featured Project',
   },
   {
+    name: 'WashBee',
+    tech: 'Flutter, Dart, Provider, Google Maps, Dio, Firebase FCM',
+    period: '2024',
+    githubUrl: 'https://github.com/KumarMohit85/WashBee',
+    detailUrl: '/projects/washbee',
+    description: 'On-demand mobile laundry ecosystem for Customers, Delivery Drivers & Warehouse Staff with pin-drop GPS & live order tracking.',
+    color: 'rgba(59, 130, 246, 0.25)',
+    badge: 'Featured Project',
+  },
+  {
     name: 'MusicPlayer',
     tech: 'Flutter, FastAPI, PostgreSQL, Cloudinary',
     period: 'Feb 2024 – Mar 2024',
