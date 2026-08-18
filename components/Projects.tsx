@@ -2,10 +2,21 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { FaGithub, FaCalendarAlt, FaExternalLinkAlt, FaCode } from 'react-icons/fa'
+import Link from 'next/link'
+import { FaGithub, FaCalendarAlt, FaExternalLinkAlt, FaCode, FaArrowRight, FaMagic } from 'react-icons/fa'
 import styles from './Projects.module.css'
 
 const projects = [
+  {
+    name: 'Gyan Jyoti',
+    tech: 'Flutter, Dart, Riverpod, go_router, Dio, Firebase FCM',
+    period: '2024',
+    githubUrl: 'https://github.com/KumarMohit85/GyanJyoti',
+    detailUrl: '/projects/gyan-jyoti',
+    description: 'Gamified preschool learning app for children aged 2–5 (English, Math, Science & Art) built with Flutter & Riverpod.',
+    color: 'rgba(245, 158, 11, 0.3)',
+    badge: 'Featured Project',
+  },
   {
     name: 'PaperSafe',
     tech: 'Flutter, Node.js, Express.js, MongoDB, Cloudinary',
@@ -150,6 +161,15 @@ export default function Projects() {
               }}
             />
 
+            {project.badge && (
+              <div className={styles.badgeContainer}>
+                <span className={styles.badgeChip}>
+                  <FaMagic size={10} className={styles.badgeIcon} />
+                  {project.badge}
+                </span>
+              </div>
+            )}
+
             <div className={styles.projectHeader}>
               <motion.div
                 className={styles.iconContainer}
@@ -207,6 +227,19 @@ export default function Projects() {
             >
               {project.description}
             </motion.p>
+
+            {project.detailUrl && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.45 + (index * 0.15) }}
+              >
+                <Link href={project.detailUrl} className={styles.detailButton}>
+                  <span>Explore Project Details</span>
+                  <FaArrowRight size={14} className={styles.arrowIcon} />
+                </Link>
+              </motion.div>
+            )}
 
             <div className={styles.projectFooter}>
               <motion.span 
