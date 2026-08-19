@@ -46,33 +46,27 @@ export default function SoundWavePage() {
       desc: 'Spotify-inspired discovery dashboard with personalized greeting, recent plays grid, "Latest Today" horizontal carousel, and "Made For You" collection — plus persistent mini player bar.',
     },
     {
-      src: '/music_player/homepage_2.jpeg',
-      title: 'Home Dashboard — Discovery Feed',
-      flow: 'SCREEN 2: HOME',
-      desc: 'Extended home view showing the horizontally scrollable "Latest Today" album artwork carousel and "Made For You" curated section with album art thumbnails.',
-    },
-    {
       src: '/music_player/music_player.jpeg',
       title: 'Interactive Music Player',
-      flow: 'SCREEN 3: PLAYER',
+      flow: 'SCREEN 2: PLAYER',
       desc: 'Full-screen player with album artwork, real-time seek bar, playback controls (shuffle, previous, pause/play, next, repeat), and dynamic golden theme extracted from cover art.',
     },
     {
       src: '/music_player/library_screen.jpeg',
       title: 'User Library & Favorites',
-      flow: 'SCREEN 4: LIBRARY',
+      flow: 'SCREEN 3: LIBRARY',
       desc: 'Personal music hub displaying curated favorite tracks with instant heart-toggle synchronization and live track count badges.',
     },
     {
       src: '/music_player/upload_music.jpeg',
       title: 'Creator Studio — Upload Music',
-      flow: 'SCREEN 5: UPLOAD',
+      flow: 'SCREEN 4: UPLOAD',
       desc: 'Creator studio enabling users to upload MP3/WAV tracks and custom artwork directly to Cloudinary CDN, complete with form inputs and color picker.',
     },
     {
       src: '/music_player/upload_music_2.jpeg',
       title: 'Upload Music — Track Details',
-      flow: 'SCREEN 6: UPLOAD',
+      flow: 'SCREEN 5: UPLOAD',
       desc: 'Detailed upload flow with dynamic audio waveform generation, track metadata input, and artwork selection before Cloudinary CDN submission.',
     },
   ]
@@ -153,7 +147,7 @@ export default function SoundWavePage() {
               </div>
 
               <h1 className={styles.title}>
-                <span className={styles.titleGradient}>SoundWave</span>
+                <span className={styles.titleGradient}>MusicPlayer</span>
               </h1>
 
               <p className={styles.oneLiner}>
