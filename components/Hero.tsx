@@ -61,7 +61,7 @@ export default function Hero() {
               transition={{ delay: 0.8 }}
             >
               <motion.a
-                href="https://drive.google.com/file/d/1qCtxEwzm4Iq_u9nSAFM7T0Ao4qoe2p0B/view?usp=sharing"
+                href="/Mohit_Kumar_Resume_f_aug.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`glass-effect ${styles.downloadBtn}`}

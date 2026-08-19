@@ -12,7 +12,7 @@ const navItems = [
   { name: 'Skills', href: '#skills' },
   { name: 'Coding Profile', href: '#milestones' },
   { name: 'Achievements', href: '#achievements' },
-  { name: 'Resume', href: 'https://drive.google.com/file/d/1qCtxEwzm4Iq_u9nSAFM7T0Ao4qoe2p0B/view?usp=sharing', external: true },
+  { name: 'Resume', href: '/Mohit_Kumar_Resume_f_aug.pdf', external: true },
 ]
 
 const itemVariants = {
