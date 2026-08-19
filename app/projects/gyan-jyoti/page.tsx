@@ -24,6 +24,7 @@ import {
   FaTimes,
   FaChevronLeft,
   FaChevronRight,
+  FaGooglePlay,
 } from 'react-icons/fa'
 import CustomCursor from '@/components/CustomCursor'
 import styles from './GyanJyoti.module.css'
@@ -524,10 +525,15 @@ export default function GyanJyotiPage() {
             </p>
 
             <div className={styles.ctaButtons}>
-              <Link href="/#contact" className={styles.btnPrimary}>
-                <FaEnvelope />
-                <span>Contact Me</span>
-              </Link>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.gyanjyotikids.app&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.btnPrimary}
+              >
+                <FaGooglePlay />
+                <span>Get on Google Play</span>
+              </a>
               <a
                 href="https://github.com/KumarMohit85/GyanJyoti"
                 target="_blank"
@@ -537,9 +543,9 @@ export default function GyanJyotiPage() {
                 <FaGithub />
                 <span>View GitHub Repository</span>
               </a>
-              <Link href="/#portfolio" className={styles.btnSecondary}>
-                <FaExternalLinkAlt />
-                <span>Explore Other Projects</span>
+              <Link href="/#contact" className={styles.btnSecondary}>
+                <FaEnvelope />
+                <span>Contact Me</span>
               </Link>
             </div>
           </div>

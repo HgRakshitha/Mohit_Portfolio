@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Link from 'next/link'
-import { FaGithub, FaCalendarAlt, FaExternalLinkAlt, FaCode, FaArrowRight, FaMagic } from 'react-icons/fa'
+import { FaGithub, FaCalendarAlt, FaExternalLinkAlt, FaCode, FaArrowRight, FaMagic, FaGooglePlay } from 'react-icons/fa'
 import styles from './Projects.module.css'
 
 const projects = [
@@ -12,6 +12,7 @@ const projects = [
     tech: 'Flutter, Dart, Riverpod, go_router, Dio, Firebase FCM',
     period: '2024',
     githubUrl: 'https://github.com/KumarMohit85/GyanJyoti',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.gyanjyotikids.app&pcampaignid=web_share',
     detailUrl: '/projects/gyan-jyoti',
     description: 'Gamified preschool learning app for children aged 2–5 (English, Math, Science & Art) built with Flutter & Riverpod.',
     color: 'rgba(245, 158, 11, 0.3)',
@@ -207,31 +208,58 @@ export default function Projects() {
               >
                 {project.name}
               </motion.h3>
-              {project.githubUrl && (
-                <motion.a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.githubLink}
-                  initial={{ opacity: 0, scale: 0, rotate: -180 }}
-                  animate={inView ? { 
-                    opacity: 1, 
-                    scale: 1, 
-                    rotate: 0,
-                  } : {}}
-                  transition={{ delay: 0.3 + (index * 0.15), type: 'spring', stiffness: 200 }}
-                  whileHover={{ 
-                    scale: 1.2,
-                    rotate: [0, -10, 10, -10, 0],
-                    transition: { duration: 0.3 }
-                  }}
-                  whileTap={{ scale: 0.9 }}
-                  aria-label={`View ${project.name} on GitHub`}
-                >
-                  <FaGithub size={20} />
-                  <FaExternalLinkAlt size={12} className={styles.externalIcon} />
-                </motion.a>
-              )}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                {project.playStoreUrl && (
+                  <motion.a
+                    href={project.playStoreUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.githubLink}
+                    initial={{ opacity: 0, scale: 0, rotate: -180 }}
+                    animate={inView ? { 
+                      opacity: 1, 
+                      scale: 1, 
+                      rotate: 0,
+                    } : {}}
+                    transition={{ delay: 0.28 + (index * 0.15), type: 'spring', stiffness: 200 }}
+                    whileHover={{ 
+                      scale: 1.2,
+                      rotate: [0, -10, 10, -10, 0],
+                      transition: { duration: 0.3 }
+                    }}
+                    whileTap={{ scale: 0.9 }}
+                    aria-label={`Get ${project.name} on Google Play Store`}
+                  >
+                    <FaGooglePlay size={18} />
+                    <FaExternalLinkAlt size={11} className={styles.externalIcon} />
+                  </motion.a>
+                )}
+                {project.githubUrl && (
+                  <motion.a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.githubLink}
+                    initial={{ opacity: 0, scale: 0, rotate: -180 }}
+                    animate={inView ? { 
+                      opacity: 1, 
+                      scale: 1, 
+                      rotate: 0,
+                    } : {}}
+                    transition={{ delay: 0.3 + (index * 0.15), type: 'spring', stiffness: 200 }}
+                    whileHover={{ 
+                      scale: 1.2,
+                      rotate: [0, -10, 10, -10, 0],
+                      transition: { duration: 0.3 }
+                    }}
+                    whileTap={{ scale: 0.9 }}
+                    aria-label={`View ${project.name} on GitHub`}
+                  >
+                    <FaGithub size={20} />
+                    <FaExternalLinkAlt size={12} className={styles.externalIcon} />
+                  </motion.a>
+                )}
+              </div>
             </div>
             
             <motion.p 
