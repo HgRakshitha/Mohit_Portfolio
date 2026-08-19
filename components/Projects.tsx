@@ -42,6 +42,7 @@ const projects = [
     tech: 'Flutter, FastAPI, PostgreSQL, Cloudinary',
     period: 'Feb 2024 – Mar 2024',
     githubUrl: 'https://github.com/KumarMohit85/MusicPlayerApp',
+    detailUrl: '/projects/soundwave',
     description: 'Full-stack cross-platform music player with JWT authentication',
     color: 'rgba(139, 92, 246, 0.15)',
     badge: 'Full-Stack Audio',
