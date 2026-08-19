@@ -15,7 +15,7 @@ const projects = [
     detailUrl: '/projects/gyan-jyoti',
     description: 'Gamified preschool learning app for children aged 2–5 (English, Math, Science & Art) built with Flutter & Riverpod.',
     color: 'rgba(245, 158, 11, 0.3)',
-    badge: 'Featured Project',
+    badge: 'EdTech & Gamification',
   },
   {
     name: 'PaperSafe',
@@ -25,7 +25,7 @@ const projects = [
     detailUrl: '/projects/papersafe',
     description: 'AI-Powered & Hardware-Secured Digital Vault built with Flutter, Riverpod, Node.js, Gemini AI, ML Kit OCR, and offline BLE & Wi-Fi Direct P2P transfer.',
     color: 'rgba(6, 182, 212, 0.25)',
-    badge: 'Featured Project',
+    badge: 'Cybersecurity & AI',
   },
   {
     name: 'WashBee',
@@ -34,7 +34,7 @@ const projects = [
     detailUrl: '/projects/washbee',
     description: 'On-demand mobile laundry ecosystem for Customers, Delivery Drivers & Warehouse Staff with pin-drop GPS & live order tracking.',
     color: 'rgba(59, 130, 246, 0.25)',
-    badge: 'Featured Project',
+    badge: 'On-Demand Logistics',
   },
   {
     name: 'MusicPlayer',
@@ -43,6 +43,7 @@ const projects = [
     githubUrl: 'https://github.com/KumarMohit85/MusicPlayerApp',
     description: 'Full-stack cross-platform music player with JWT authentication',
     color: 'rgba(139, 92, 246, 0.15)',
+    badge: 'Full-Stack Audio',
   },
   {
     name: 'VitalCarePlus',
@@ -51,6 +52,7 @@ const projects = [
     githubUrl: 'https://github.com/KumarMohit85/VitalCarePlus',
     description: 'Healthcare management application built with Flutter for cross-platform deployment',
     color: 'rgba(236, 72, 153, 0.15)',
+    badge: 'Healthcare Tech',
   },
 ]
 
