@@ -45,7 +45,7 @@ const projects = [
     detailUrl: '/projects/soundwave',
     description: 'Full-stack cross-platform music player with JWT authentication',
     color: 'rgba(139, 92, 246, 0.15)',
-    badge: 'Audio Player',
+    badge: 'Cloud Music Streaming',
   },
   {
     name: 'VitalCarePlus',
