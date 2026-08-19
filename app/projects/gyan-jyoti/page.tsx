@@ -534,15 +534,6 @@ export default function GyanJyotiPage() {
                 <FaGooglePlay />
                 <span>Get on Google Play</span>
               </a>
-              <a
-                href="https://github.com/KumarMohit85/GyanJyoti"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.btnSecondary}
-              >
-                <FaGithub />
-                <span>View GitHub Repository</span>
-              </a>
               <Link href="/#contact" className={styles.btnSecondary}>
                 <FaEnvelope />
                 <span>Contact Me</span>

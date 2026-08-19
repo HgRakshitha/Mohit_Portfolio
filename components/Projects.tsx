@@ -12,7 +12,6 @@ const projects = [
     name: 'Gyan Jyoti',
     tech: 'Flutter, Dart, Riverpod, go_router, Dio, Firebase FCM',
     period: '2024',
-    githubUrl: 'https://github.com/KumarMohit85/GyanJyoti',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.gyanjyotikids.app&pcampaignid=web_share',
     detailUrl: '/projects/gyan-jyoti',
     description: 'Gamified preschool learning app for children aged 2–5 (English, Math, Science & Art) built with Flutter & Riverpod.',
