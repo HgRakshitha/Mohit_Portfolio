@@ -7,33 +7,36 @@ import styles from './Experience.module.css'
 
 const experience = {
   company: 'Unico International Pvt. Limited',
-  position: 'Software Developer',
+  position: 'Software Developer (Flutter & Backend)',
   period: 'June 2025 – Present',
   location: 'Bengaluru, India',
-  type: 'Intern: Jun 2025 – Dec 2025',
   projects: [
     {
       name: 'Real-Time Trading Data Gateway',
       tech: 'Node.js, WebSockets, Supabase, AWS EC2, Docker, PM2',
       points: [
-        'Developed and scaled a real-time trading backend for forex and crypto markets using Node.js and WebSockets, enabling sub-second market data streaming and automated SL/TP execution.',
-        'Designed retry-safe database operations and caching layers, and deployed production workloads on AWS EC2 using Docker and PM2 for reliability and scalability.',
+        'Developed a Node.js WebSocket gateway supporting 500+ concurrent connections for forex market data.',
+        'Designed subscription aggregation and data distribution pipelines to optimize real-time market feed delivery.',
+        'Implemented retry-safe persistence and caching mechanisms to improve system reliability and fault tolerance.',
+        'Built event-driven workflows for automated Stop-Loss and Take-Profit execution using live market feeds.',
       ],
     },
     {
       name: 'DoorSync – Community Management Platform',
       tech: 'Java, Spring Boot, AWS Lambda, API Gateway, DynamoDB, Cognito',
       points: [
-        'Contributed to backend microservices development using Java and Spring Boot, following DDD, CQRS, and Hexagonal Architecture principles.',
-        'Implemented serverless APIs using AWS Lambda and API Gateway, integrated Amazon Cognito authentication, and managed infrastructure via AWS SAM / CloudFormation.',
+        'Contributed to Java Spring Boot microservices within a DDD, CQRS, and Hexagonal Architecture ecosystem.',
+        'Developed serverless REST APIs using AWS Lambda and API Gateway for scalable request processing.',
+        'Implemented Cognito-based authentication and managed cloud infrastructure using AWS SAM and CloudFormation.',
       ],
     },
     {
       name: 'WashBee – Laundry Service Platform',
-      tech: 'Node.js, Express, Prisma, PostgreSQL, Supabase, FCM',
+      tech: 'Flutter, Riverpod, Node.js, Express, Prisma, PostgreSQL, Supabase, FCM',
       points: [
-        'Architected a scalable multi-actor backend for customers, admins, in-house staff, and delivery partners, supporting full order lifecycle, cart, service catalog, dual pricing models, billing, and role-based workflows.',
-        'Designed real-time delivery assignment and tracking using SSE and FCM, with live location tracking, photo-based pickup/drop proof, and automated assignment flows via polling jobs and webhook-driven triggers.',
+        'Built cross-platform Flutter apps with Provider and GoRouter, supporting 4 client interfaces on one shared backend.',
+        'Implemented SSE for live order-status streaming, syncing delivery updates to clients in real time without polling.',
+        'Engineered an atomic order pipeline with Prisma transactions and PostgreSQL, backed by Redis/BullMQ for async scheduling.',
       ],
     },
   ],
@@ -129,14 +132,6 @@ export default function Experience() {
               transition={{ delay: 0.4 }}
             >
               {experience.position}
-            </motion.p>
-            <motion.p 
-              className={styles.type}
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.5 }}
-            >
-              {experience.type}
             </motion.p>
           </div>
           <motion.div 

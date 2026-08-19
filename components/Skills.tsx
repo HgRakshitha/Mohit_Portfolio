@@ -24,10 +24,12 @@ import {
   FaLayerGroup,
   FaTasks,
   FaCogs,
+  FaMobileAlt,
 } from 'react-icons/fa'
 import {
   SiCplusplus,
   SiDart,
+  SiFlutter,
   SiFastapi,
   SiExpress,
   SiSpringboot,
@@ -60,6 +62,19 @@ interface SkillCategory {
 }
 
 const skillCategories: SkillCategory[] = [
+  {
+    icon: FaMobileAlt,
+    title: 'Mobile Development',
+    skills: [
+      { name: 'Flutter', icon: SiFlutter },
+      { name: 'Dart', icon: SiDart },
+      { name: 'Riverpod', icon: FaCubes },
+      { name: 'Provider', icon: FaLayerGroup },
+      { name: 'GoRouter', icon: FaSitemap },
+      { name: 'fpdart', icon: FaCode },
+      { name: 'Dio', icon: TbApi },
+    ],
+  },
   {
     icon: FaCode,
     title: 'Languages',

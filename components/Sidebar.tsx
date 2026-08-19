@@ -143,7 +143,7 @@ export default function Sidebar() {
               transition={{ delay: 0.4, duration: 0.4 }}
               whileHover={{ scale: 1.05 }}
             >
-              <span>Software Developer</span>
+              <span>Software Developer (Flutter &amp; Backend)</span>
             </motion.div>
           </motion.div>
         </motion.div>

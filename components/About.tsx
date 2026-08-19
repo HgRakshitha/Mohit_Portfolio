@@ -60,7 +60,7 @@ export default function About() {
             transition: { duration: 0.2 }
           }}
         >
-          Backend-focused Software Engineer with hands-on experience building real-time, production-grade systems. I specialize in designing scalable backend architectures using Node.js and Spring Boot, implementing event-driven workflows, Redis caching, background job scheduling, and cloud-native deployments on AWS.
+          Software Developer specializing in <strong>Flutter &amp; Backend Engineering</strong> with hands-on experience building production-grade mobile applications and distributed backend systems. I engineer clean-architecture Flutter apps (Riverpod, Provider, GoRouter, Dio) integrated with event-driven backend microservices in Node.js, Java (Spring Boot), and Python (FastAPI).
         </motion.p>
         
         <motion.p 
@@ -71,7 +71,7 @@ export default function About() {
             transition: { duration: 0.2 }
           }}
         >
-          Alongside backend systems, I build clean-architecture Flutter applications integrated with secure, role-based APIs. I enjoy solving complex system problems, optimizing performance, and designing reliable multi-actor platforms that operate in real-world production environments.
+          From building real-time WebSocket trading gateways supporting 500+ concurrent connections and serverless cloud APIs on AWS, to architecting multi-client mobile apps with live SSE streaming, zero-server offline P2P encryption, and background audio streaming engines, I enjoy solving complex end-to-end engineering challenges.
         </motion.p>
       </motion.div>
     </section>

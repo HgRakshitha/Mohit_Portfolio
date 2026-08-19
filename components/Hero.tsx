@@ -41,7 +41,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Software Developer
+              Software Developer (Flutter &amp; Backend)
             </motion.p>
 
             <motion.p
@@ -50,8 +50,8 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
-              Full-Stack Developer specializing in Node.js, Flutter, AWS, and modern web technologies.
-              Building scalable applications with clean architecture principles.
+              Specializing in cross-platform Flutter apps and production-grade backend systems (Node.js, Spring Boot, AWS).
+              Building scalable, real-time applications with clean architecture principles.
             </motion.p>
 
             <motion.div
