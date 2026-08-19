@@ -198,6 +198,27 @@
   line-height: 1.3;
   position: relative;
   z-index: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .projectHeader {
+    gap: 0.6rem;
+  }
+  .iconContainer {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+  .projectName {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .projectName {
+    font-size: 1.02rem;
+  }
 }
 
 @media (min-width: 768px) {
