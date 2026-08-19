@@ -109,7 +109,7 @@ export default function Sidebar() {
                 }}
               >
                 <Image
-                  src="/mohit.JPEG"
+                  src="/passport_photo.jpeg"
                   alt="Mohit Kumar Pal"
                   width={120}
                   height={120}
