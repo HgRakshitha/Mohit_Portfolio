@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { FaGithub, FaCalendarAlt, FaExternalLinkAlt, FaCode, FaArrowRight, FaMagic, FaGooglePlay } from 'react-icons/fa'
 import styles from './Projects.module.css'
 
@@ -47,15 +48,6 @@ const projects = [
     color: 'rgba(139, 92, 246, 0.15)',
     badge: 'Cloud Music Streaming',
   },
-  {
-    name: 'VitalCarePlus',
-    tech: 'Flutter, Dart, Cross-platform',
-    period: '2024',
-    githubUrl: 'https://github.com/KumarMohit85/VitalCarePlus',
-    description: 'Healthcare management application built with Flutter for cross-platform deployment',
-    color: 'rgba(236, 72, 153, 0.15)',
-    badge: 'Healthcare Tech',
-  },
 ]
 
 const containerVariants = {
@@ -90,6 +82,7 @@ const cardVariants = {
 
 export default function Projects() {
   const ref = useRef(null)
+  const router = useRouter()
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
@@ -117,6 +110,7 @@ export default function Projects() {
             key={index}
             className={styles.projectCard}
             variants={cardVariants}
+            onClick={() => project.detailUrl && router.push(project.detailUrl)}
             animate={{
               y: [0, -10, 0],
               rotateY: [0, 3, -3, 0],
@@ -142,7 +136,10 @@ export default function Projects() {
               transition: { duration: 0.3 }
             }}
             whileTap={{ scale: 0.97 }}
-            style={{ '--card-color': project.color } as React.CSSProperties}
+            style={{ 
+              cursor: project.detailUrl ? 'pointer' : 'default',
+              '--card-color': project.color 
+            } as React.CSSProperties}
           >
             <motion.div
               className={styles.cardGlow}
@@ -216,6 +213,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.githubLink}
+                    onClick={(e) => e.stopPropagation()}
                     initial={{ opacity: 0, scale: 0, rotate: -180 }}
                     animate={inView ? { 
                       opacity: 1, 
@@ -241,6 +239,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.githubLink}
+                    onClick={(e) => e.stopPropagation()}
                     initial={{ opacity: 0, scale: 0, rotate: -180 }}
                     animate={inView ? { 
                       opacity: 1, 
@@ -278,10 +277,10 @@ export default function Projects() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.45 + (index * 0.15) }}
               >
-                <Link href={project.detailUrl} className={styles.detailButton}>
+                <div className={styles.detailButton}>
                   <span>Explore Project Details</span>
                   <FaArrowRight size={14} className={styles.arrowIcon} />
-                </Link>
+                </div>
               </motion.div>
             )}
 
@@ -300,52 +299,32 @@ export default function Projects() {
                     duration: 2,
                     repeat: Infinity,
                     ease: 'easeInOut',
-                    delay: index * 0.3,
                   }}
+                  style={{ display: 'inline-block' }}
                 >
-                  <FaCalendarAlt className={styles.calendarIcon} size={12} />
+                  <FaCalendarAlt size={14} className={styles.periodIcon} />
                 </motion.span>
                 {project.period}
               </motion.span>
-              <motion.div 
-                className={styles.techStack}
-                initial={{ opacity: 0 }}
-                animate={inView ? { opacity: 1 } : {}}
-                transition={{ delay: 0.6 + (index * 0.15) }}
-              >
-                {project.tech.split(', ').map((tech, techIndex) => (
-                  <motion.span
-                    key={techIndex}
+              
+              <div className={styles.techStack}>
+                {project.tech.split(', ').map((tech, i) => (
+                  <motion.span 
+                    key={i} 
                     className={styles.techTag}
-                    initial={{ opacity: 0, scale: 0, rotateZ: -180 }}
-                    animate={inView ? { 
-                      opacity: 1, 
-                      scale: 1, 
-                      rotateZ: 0,
-                      y: [0, -4, 0],
-                    } : {}}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ 
-                      opacity: { delay: 0.7 + (index * 0.15) + (techIndex * 0.08) },
-                      scale: { delay: 0.7 + (index * 0.15) + (techIndex * 0.08), type: 'spring', stiffness: 200 },
-                      rotateZ: { delay: 0.7 + (index * 0.15) + (techIndex * 0.08) },
-                      y: {
-                        duration: 2 + (techIndex * 0.2),
-                        repeat: Infinity,
-                        ease: 'easeInOut',
-                        delay: (index * 0.3) + (techIndex * 0.2),
-                      },
+                      delay: 0.6 + (index * 0.1) + (i * 0.05),
+                      type: 'spring',
+                      stiffness: 200,
                     }}
-                    whileHover={{ 
-                      scale: 1.15,
-                      rotateZ: [0, 5, -5, 0],
-                      y: -5,
-                      transition: { duration: 0.3 }
-                    }}
+                    whileHover={{ scale: 1.1, y: -2 }}
                   >
                     {tech}
                   </motion.span>
                 ))}
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         ))}
