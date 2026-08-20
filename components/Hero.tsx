@@ -41,7 +41,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Software Developer (Flutter &amp; Backend)
+              Software Developer
             </motion.p>
 
             <motion.p
@@ -61,7 +61,7 @@ export default function Hero() {
               transition={{ delay: 0.8 }}
             >
               <motion.a
-                href="/Mohit_Kumar_Resume_f_aug.pdf"
+                href="https://drive.google.com/file/d/1qMChFQ-EW9PtnOKk8sHyz_JprjOnTATt/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`glass-effect ${styles.downloadBtn}`}

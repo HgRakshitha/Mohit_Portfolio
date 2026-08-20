@@ -7,7 +7,7 @@ import styles from './Experience.module.css'
 
 const experience = {
   company: 'Unico International Pvt. Limited',
-  position: 'Software Developer (Flutter & Backend)',
+  position: 'Software Developer',
   period: 'June 2025 – Present',
   location: 'Bengaluru, India',
   projects: [
